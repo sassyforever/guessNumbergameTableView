@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE5720931EE184E800FCADDA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5720921EE184E800FCADDA /* String.swift */; };
+		DE5720951EE185E900FCADDA /* GuessNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5720941EE185E900FCADDA /* GuessNumberViewController.swift */; };
 		DE89C17B1EE175B500A8D185 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89C17A1EE175B500A8D185 /* AppDelegate.swift */; };
 		DE89C17D1EE175B500A8D185 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE89C17C1EE175B500A8D185 /* ViewController.swift */; };
 		DE89C1801EE175B500A8D185 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE89C17E1EE175B500A8D185 /* Main.storyboard */; };
 		DE89C1821EE175B500A8D185 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE89C1811EE175B500A8D185 /* Assets.xcassets */; };
 		DE89C1851EE175B500A8D185 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE89C1831EE175B500A8D185 /* LaunchScreen.storyboard */; };
+		DEC533051EE2BD5B001A45F7 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC533041EE2BD5B001A45F7 /* RecordTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE5720921EE184E800FCADDA /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		DE5720941EE185E900FCADDA /* GuessNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuessNumberViewController.swift; sourceTree = "<group>"; };
 		DE89C1771EE175B500A8D185 /* guessNumbergameTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = guessNumbergameTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE89C17A1EE175B500A8D185 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE89C17C1EE175B500A8D185 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		DE89C1811EE175B500A8D185 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE89C1841EE175B500A8D185 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE89C1861EE175B500A8D185 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEC533041EE2BD5B001A45F7 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				DE89C1811EE175B500A8D185 /* Assets.xcassets */,
 				DE89C1831EE175B500A8D185 /* LaunchScreen.storyboard */,
 				DE89C1861EE175B500A8D185 /* Info.plist */,
+				DE5720921EE184E800FCADDA /* String.swift */,
+				DE5720941EE185E900FCADDA /* GuessNumberViewController.swift */,
+				DEC533041EE2BD5B001A45F7 /* RecordTableViewCell.swift */,
 			);
 			path = guessNumbergameTableView;
 			sourceTree = "<group>";
@@ -136,6 +145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEC533051EE2BD5B001A45F7 /* RecordTableViewCell.swift in Sources */,
+				DE5720931EE184E800FCADDA /* String.swift in Sources */,
+				DE5720951EE185E900FCADDA /* GuessNumberViewController.swift in Sources */,
 				DE89C17D1EE175B500A8D185 /* ViewController.swift in Sources */,
 				DE89C17B1EE175B500A8D185 /* AppDelegate.swift in Sources */,
 			);
@@ -299,6 +311,7 @@
 				DE89C18B1EE175B500A8D185 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

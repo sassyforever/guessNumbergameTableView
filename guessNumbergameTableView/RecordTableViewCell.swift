@@ -1,5 +1,5 @@
 //
-//  RecordTableViewCell.swift
+//  recordCellTableViewCell.swift
 //  guessNumbergameTableView
 //
 //  Created by  Terry on 2017/6/3.
@@ -9,7 +9,7 @@
 import UIKit
 
 class RecordTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var recordLabel:UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Guess Number View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GuessNumberViewController" customModule="guessNumbergameTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,102 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="????" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeU-nG-qEU">
+                                <rect key="frame" x="166" y="53" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YH6-a2-e26">
+                                <rect key="frame" x="139" y="89" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jb9-wU-KG7">
+                                <rect key="frame" x="156" y="149" width="63" height="30"/>
+                                <state key="normal" title="Guess"/>
+                                <connections>
+                                    <action selector="guessButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U3X-MR-Ifg"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T14-CK-TrY">
+                                <rect key="frame" x="16" y="209" width="343" height="308"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="recordCell" rowHeight="44" id="9i1-0S-SoX" customClass="RecordTableViewCell" customModule="guessNumbergameTableView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9i1-0S-SoX" id="gJK-jY-u0d">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4HN-UT-ioi">
+                                                    <rect key="frame" x="48" y="11" width="247" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="4HN-UT-ioi" secondAttribute="bottom" constant="3" id="8bF-X5-ulB"/>
+                                                <constraint firstItem="4HN-UT-ioi" firstAttribute="leading" secondItem="gJK-jY-u0d" secondAttribute="leadingMargin" constant="40" id="oGX-hi-Dlx"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="4HN-UT-ioi" secondAttribute="trailing" constant="40" id="rCZ-0k-jbn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="recordLabel" destination="4HN-UT-ioi" id="6da-wr-rb6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="WTo-CF-j8h"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2cL-JO-92R"/>
+                                </connections>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="n6x-de-qef">
+                                <rect key="frame" x="124" y="576" width="127" height="29"/>
+                                <segments>
+                                    <segment title="Single"/>
+                                    <segment title="Multiple"/>
+                                </segments>
+                                <connections>
+                                    <action selector="switchSegmentedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Mpu-1M-o6N"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jb9-wU-KG7" firstAttribute="top" secondItem="YH6-a2-e26" secondAttribute="bottom" constant="30" id="21L-8k-J94"/>
+                            <constraint firstItem="n6x-de-qef" firstAttribute="top" secondItem="T14-CK-TrY" secondAttribute="bottom" constant="59" id="5e7-Ue-f2F"/>
+                            <constraint firstItem="n6x-de-qef" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="108" id="BvZ-0I-hvg"/>
+                            <constraint firstItem="YH6-a2-e26" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="123" id="CO8-oP-ZpE"/>
+                            <constraint firstItem="T14-CK-TrY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="HHn-7t-DQC"/>
+                            <constraint firstItem="T14-CK-TrY" firstAttribute="top" secondItem="jb9-wU-KG7" secondAttribute="bottom" constant="30" id="IGE-ir-61E"/>
+                            <constraint firstItem="QeU-nG-qEU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="K2k-n7-rne"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jb9-wU-KG7" secondAttribute="trailing" constant="140" id="LYg-bn-9ye"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n6x-de-qef" secondAttribute="bottom" constant="63" id="OfR-z5-jRV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="n6x-de-qef" secondAttribute="trailing" constant="108" id="WtP-Uu-ib4"/>
+                            <constraint firstItem="T14-CK-TrY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="XQi-3i-2D8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YH6-a2-e26" secondAttribute="trailing" constant="123" id="f2f-Nj-ezv"/>
+                            <constraint firstItem="QeU-nG-qEU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="150" id="iuL-yb-ObR"/>
+                            <constraint firstItem="YH6-a2-e26" firstAttribute="top" secondItem="QeU-nG-qEU" secondAttribute="bottom" constant="15" id="yGH-Jt-UOj"/>
+                            <constraint firstItem="jb9-wU-KG7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="140" id="zpW-Ld-Qpa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QeU-nG-qEU" secondAttribute="trailing" constant="150" id="zzp-Ft-ExB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="guess" destination="jb9-wU-KG7" id="MEe-0s-tjc"/>
+                        <outlet property="initialLabel" destination="QeU-nG-qEU" id="Les-Sg-VRZ"/>
+                        <outlet property="numberTextField" destination="YH6-a2-e26" id="cRN-q3-29j"/>
+                        <outlet property="switchSegmentedControll" destination="n6x-de-qef" id="oFn-Wt-0c1"/>
+                        <outlet property="tableView" destination="T14-CK-TrY" id="Nam-uP-UA7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>
